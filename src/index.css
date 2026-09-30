@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-warm: #F5F4F1;
+    --bg-white: #FFFFFF;
+    --border-light: rgba(255, 255, 255, 0.6);
+    --border-subtle: rgba(28, 28, 28, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-blur: 18px;
+  }
+
+  body {
+    background-color: #F5F4F1;
+    color: #1C1C1C;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism Reusable Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(28, 28, 28, 0.03);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(28, 28, 28, 0.06);
+}
+
+.glass-modal {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.08);
+}
+
+.glass-drawer {
+  background: rgba(245, 244, 241, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #E4E4E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B6B68;
+}
